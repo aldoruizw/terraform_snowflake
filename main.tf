@@ -42,15 +42,15 @@ resource "snowflake_schema" "tf_db_tf_schema" {
 }
 
 # New provider that will use USERADMIN to create users, roles, and grants
-provider "snowflake" {
-  organization_name = "your_org_name"
-  account_name      = "your_account_name"
-  user              = "TERRAFORM_SVC"
-  role              = "USERADMIN"
-  alias             = "useradmin"
-  authenticator     = "SNOWFLAKE_JWT"
-  private_key       = file("~/.ssh/terraform_demo.p8")
-}
+#provider "snowflake" {
+#  organization_name = "your_org_name"
+#  account_name      = "your_account_name"
+#  user              = "TERRAFORM_SVC"
+#  role              = "USERADMIN"
+#  alias             = "useradmin"
+#  authenticator     = "SNOWFLAKE_JWT"
+#  private_key       = file("~/.ssh/terraform_demo.p8")
+#}
 
 # Create a new role using USERADMIN
 resource "snowflake_account_role" "tf_role" {

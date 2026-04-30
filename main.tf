@@ -5,11 +5,10 @@ terraform {
     }
   }
 
-  # Tell Terraform to use HCP Terraform as the backend
   cloud {
-    organization = "YOUR_HCP_TF_ORG"   # ← your HCP Terraform org name
+    organization = "aldoruizw"
     workspaces {
-      name = "YOUR_WORKSPACE_NAME"      # ← your HCP Terraform workspace name
+      name = "gh-actions-demo"
     }
   }
 }
